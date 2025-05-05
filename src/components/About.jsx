@@ -18,7 +18,7 @@ To revolutionize supply chain and logistics operations by integrating blockchain
 To create a future where every product's journey is traceable and powered by renewable energy, leading to a global supply chain that is both environmentally responsible and technologically advanced, contributing to a sustainable and equitable world.</p></p>
                 </Col>
                 <Col md={6}>
-                    <Image src="{pic1}" fluid rounded />
+                    <img src="https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg" style={{width: '100%'}} rounded />
                 </Col>
             </Row>
 
