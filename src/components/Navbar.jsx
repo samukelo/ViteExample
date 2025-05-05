@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Container, Dropdown, Modal, Button, Form } from 'react-bootstrap';
+import { Navbar, Nav, Container, Dropdown, Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
 function CustomNavbar() {
   const [showLogin, setShowLogin] = useState(false);
@@ -26,7 +26,7 @@ function CustomNavbar() {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
+      <Navbar bg="dark" variant="dark" sticky='top' expand="lg" className="px-3">
         <Container fluid>
           <Navbar.Brand href="/">Invexus-Pulse Energy</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -81,6 +81,16 @@ function CustomNavbar() {
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <Container>
+           <Row>
+        <Col>Normal User
+        email:sdasdsad@gmail.combining
+        Pass: sadsdsadsa
+        </Col>
+        <Col>2 of 3</Col>
+        <Col>3 of 3</Col>
+      </Row>
+          </Container>
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3">
               <Form.Label>Email address</Form.Label>
