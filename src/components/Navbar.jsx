@@ -26,7 +26,7 @@ function CustomNavbar() {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" sticky='top' expand="lg" className="px-3">
+      <Navbar bg="dark" variant="dark" sticky='top' expand="lg" className="px-4">
         <Container fluid>
           <Navbar.Brand href="/">Invexus-Pulse Energy</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

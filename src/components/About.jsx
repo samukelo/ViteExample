@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import TeamSection from './TeamSection';
 
 
 function About() {
@@ -21,11 +22,7 @@ To create a future where every product's journey is traceable and powered by ren
                     <img src="https://www.bigfootdigital.co.uk/wp-content/uploads/2020/07/image-optimisation-scaled.jpg" style={{width: '100%'}} rounded />
                 </Col>
             </Row>
-
-            <Row className="mt-5">
-                <h3>Our Team</h3>
-                {/* Team members cards would go here */}
-            </Row>
+        <TeamSection/>
         </Container>
     );
 }
