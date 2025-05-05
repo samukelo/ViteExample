@@ -28,7 +28,7 @@ function CustomNavbar() {
     <>
       <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
         <Container fluid>
-          <Navbar.Brand href="/">Invexus-Pulse Energy</Navbar.Brand>
+          <Navbar.Brand href="/">Junior</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
