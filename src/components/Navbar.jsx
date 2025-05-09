@@ -1,27 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Dropdown, Modal, Button, Form, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
+// Dummy users array (in production, replace with API)
+const users = [
+  { email: 'warehouse@gmail.com', password: '1234', role: 'normal', name: 'Warehouse Manager' },
+  { email: 'admin@gmail.com', password: 'adminpass', role: 'admin', name: 'Admin User' },
+  { email: 'greenhouse@gmail.com', password: 'greenpass', role: 'greenhouse', name: 'Greenhouse Manager' }
+];
 
 function CustomNavbar() {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
-  const [user, setUser] = useState(null); // Will hold user data when logged in
+  const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user')) || null);
+
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your actual login logic here
-    setUser({ name: "Demo User" }); // Simulate successful login
+    const matchedUser = users.find(
+      (u) => u.email === loginEmail && u.password === loginPassword
+    );
+
+    if (!matchedUser) {
+      setLoginError('Invalid email or password');
+      return;
+    }
+
+    setUser(matchedUser);
+    localStorage.setItem('user', JSON.stringify(matchedUser));
     setShowLogin(false);
+    navigate(`/dashboard/${matchedUser.role}`);
   };
 
   const handleRegister = (e) => {
     e.preventDefault();
-    // Add your actual registration logic here
-    setUser({ name: "Demo User" }); // Simulate successful registration
+    // Add actual registration logic here
+    setUser({ name: "Demo User", role: "normal" });
     setShowRegister(false);
   };
 
   const handleLogout = () => {
+    localStorage.removeItem('user');
     setUser(null);
+    navigate('/');
   };
 
   return (
@@ -33,12 +59,11 @@ function CustomNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="dashboard">Dashboard</Nav.Link>
-              <Nav.Link href="about">About</Nav.Link>
-              <Nav.Link href="contact">Contact</Nav.Link>
+              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
-            
-            {/* Account Section */}
+
             <Nav className="ms-auto">
               {user ? (
                 <Dropdown>
@@ -55,17 +80,10 @@ function CustomNavbar() {
                 </Dropdown>
               ) : (
                 <>
-                  <Button 
-                    variant="outline-light" 
-                    className="me-2"
-                    onClick={() => setShowLogin(true)}
-                  >
+                  <Button variant="outline-light" className="me-2" onClick={() => setShowLogin(true)}>
                     Login
                   </Button>
-                  <Button 
-                    variant="success"
-                    onClick={() => setShowRegister(true)}
-                  >
+                  <Button variant="success" onClick={() => setShowRegister(true)}>
                     Register
                   </Button>
                 </>
@@ -82,30 +100,33 @@ function CustomNavbar() {
         </Modal.Header>
         <Modal.Body>
           <Container>
-           <Row>
-        <Col>Normal User
-        email:sdasdsad@gmail.combining
-        Pass: sadsdsadsa
-        </Col>
-        <Col>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
+            <Row>
+              <Col><strong>Warehouse:</strong><br />Email: warehouse@gmail.com<br />Pass: 1234</Col>
+              <Col><strong>Admin:</strong><br />Email: admin@gmail.com<br />Pass: adminpass</Col>
+              <Col><strong>Greenhouse:</strong><br />Email: greenhouse@gmail.com<br />Pass: greenpass</Col>
+            </Row>
           </Container>
-          <Form onSubmit={handleLogin}>
+
+          <Form onSubmit={handleLogin} className="mt-3">
+            {loginError && <div className="text-danger mb-2">{loginError}</div>}
             <Form.Group className="mb-3">
               <Form.Label>Email address</Form.Label>
-              <Form.Control 
-                type="email" 
+              <Form.Control
+                type="email"
                 placeholder="Enter email"
+                value={loginEmail}
+                onChange={(e) => setLoginEmail(e.target.value)}
                 required
               />
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
-              <Form.Control 
-                type="password" 
+              <Form.Control
+                type="password"
                 placeholder="Password"
+                value={loginPassword}
+                onChange={(e) => setLoginPassword(e.target.value)}
                 required
               />
             </Form.Group>
@@ -128,38 +149,22 @@ function CustomNavbar() {
           <Form onSubmit={handleRegister}>
             <Form.Group className="mb-3">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control 
-                type="text" 
-                placeholder="Enter your name"
-                required
-              />
+              <Form.Control type="text" placeholder="Enter your name" required />
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Email address</Form.Label>
-              <Form.Control 
-                type="email" 
-                placeholder="Enter email"
-                required
-              />
+              <Form.Control type="email" placeholder="Enter email" required />
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
-              <Form.Control 
-                type="password" 
-                placeholder="Password"
-                required
-              />
+              <Form.Control type="password" placeholder="Password" required />
             </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control 
-                type="password" 
-                placeholder="Confirm password"
-                required
-              />
+              <Form.Control type="password" placeholder="Confirm password" required />
             </Form.Group>
 
             <div className="d-grid gap-2">
