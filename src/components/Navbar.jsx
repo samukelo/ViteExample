@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const users = [
   { email: 'warehouse@gmail.com', password: '1234', role: 'normal', name: 'Warehouse Manager' },
   { email: 'admin@gmail.com', password: 'adminpass', role: 'admin', name: 'Admin User' },
-  { email: 'greenhouse@gmail.com', password: 'greenpass', role: 'greenhouse', name: 'Greenhouse Manager' }
+  { email: 'greenhouse@gmail.com', password: 'greenpass', role: 'greenhouse', name: 'Greenhouse Manager' },
+  {email: 'SuperAdmin@invexustech.co.za', password: 'SuperAdmin', role:'superadmin', name: 'Super Admin'}
 ];
 
 function CustomNavbar() {
@@ -59,7 +60,17 @@ function CustomNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+              <Nav.Link
+              onClick={() => {
+                if (user && user.role) {
+                  navigate(`/dashboard/${user.role}`);
+                } else {
+                  setShowLogin(true); 
+                }
+              }}
+            >
+              Dashboard
+            </Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
@@ -72,8 +83,8 @@ function CustomNavbar() {
                     {user.name}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#profile">Profile</Dropdown.Item>
-                    <Dropdown.Item href="#settings">Settings</Dropdown.Item>
+                    <Dropdown.Item href="#profile" disabled>Profile</Dropdown.Item>
+                    <Dropdown.Item href="#settings" disabled>Settings</Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
                   </Dropdown.Menu>
@@ -101,6 +112,7 @@ function CustomNavbar() {
         <Modal.Body>
           <Container>
             <Row>
+            <Col><strong>Invexus Admin:</strong><br />Email: SuperAdmin@invexustech.co.za<br />Pass: SuperAdmin</Col>
               <Col><strong>Warehouse:</strong><br />Email: warehouse@gmail.com<br />Pass: 1234</Col>
               <Col><strong>Admin:</strong><br />Email: admin@gmail.com<br />Pass: adminpass</Col>
               <Col><strong>Greenhouse:</strong><br />Email: greenhouse@gmail.com<br />Pass: greenpass</Col>

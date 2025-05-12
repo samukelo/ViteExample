@@ -8,6 +8,12 @@ import Dashboard from './components/Dashboard';
 import NormalUserDashboard from './components/NormalUserDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import GreenhouseDashboard from './components/GreenhouseDashboard';
+import SuperAdmin from './components/SuperAdmin';
+import Users from './components/Users'
+import Subscriptions from './components/Subscriptions' 
+import Wallet from './components/Wallet'
+import UserManagement from './components/UserManagement'
+import Warehouses from './components/Warehouses'
 
 function App() {
   return (
@@ -19,8 +25,14 @@ function App() {
         <Route path="/dashboard/normal" element={<NormalUserDashboard />} />
       <Route path="/dashboard/admin" element={<AdminDashboard />} />
       <Route path="/dashboard/greenhouse" element={<GreenhouseDashboard />} />
+      <Route path="/dashboard/superadmin" element={<SuperAdmin />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/subscriptions" element={<Subscriptions />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/usermanagement" element={<UserManagement />} />
+        <Route path="/warehouses" element={<Warehouses />} />
       </Routes>
     </Router>
   );

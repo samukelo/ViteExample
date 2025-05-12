@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: 'Jane Doe',
     title: 'Marketing Lead',
-    image: 'https://www.bigfootdigital.co.uk/wp-content/uploads/2024/08/mark-600x600.jpg',
+    image: '/images/team1.jpeg',
     socials: {
       facebook: 'https://facebook.com',
       twitter: 'https://twitter.com',
@@ -18,7 +18,27 @@ const teamMembers = [
   {
     name: 'John Smith',
     title: 'Product Manager',
-    image: 'https://www.bigfootdigital.co.uk/wp-content/uploads/2019/04/bigfoot_digital_1.jpg',
+    image: '/images/team2.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'John Smith',
+    title: 'Product Manager',
+    image: '/images/team3.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'John Smith',
+    title: 'Product Manager',
+    image: '/images/team4.jpeg',
     socials: {
       facebook: '#',
       twitter: '#',

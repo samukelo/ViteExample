@@ -1,18 +1,35 @@
 // AdminDashboard.jsx
-import React from 'react';
+import React from 'react'
+import { Button, Card, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const AdminDashboard = () => {
+
+function AdminDashboard() {
+  const navigate = useNavigate();
   return (
     <div className="container mt-4">
-      <h2>App Admin Dashboard</h2>
-      <ul>
-        <li>User management</li>
-        <li>Role/permission settings</li>
-        <li>System health and diagnostics</li>
-        <li>Configuration (greenhouse thresholds, inventory policies)</li>
-      </ul>
-    </div>
-  );
-};
+      <h2>Admin Dashboard</h2>
+      <Row className="mt-4">
+        <Col md={6}>
+          <Card onClick={() => navigate('/usermanagement')} style={{ cursor: 'pointer' }}>
+            <Card.Body>
+              <Card.Title>Manage Staff / Users</Card.Title>
+              <Button variant="primary" className="me-2;mt-4" onClick={() => navigate(`/usermanagement`)}>User Management</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={6}>
+          <Card onClick={() => navigate('/warehouses')} style={{ cursor: 'pointer' }}>
+            <Card.Body>
+              <Card.Title>Warehouse Management</Card.Title>
+              <Button variant="success" onClick={() => navigate(`/warehouses`)}>Manage Warehouses</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+  </div>
+  )
+}
 
-export default AdminDashboard;
+export default AdminDashboard
+
