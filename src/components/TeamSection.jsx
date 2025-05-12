@@ -35,6 +35,56 @@ const teamMembers = [
       linkedin: '#',
     },
   },
+  {
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
+    image: '/images/team4.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
+    image: '/images/team5.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
+    image: '/images/team6.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
+    image: '/images/team7.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
+  {
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
+    image: '/images/team8.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },
 ];
 
 function TeamSection() {
