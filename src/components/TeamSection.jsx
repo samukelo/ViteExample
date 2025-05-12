@@ -6,8 +6,8 @@ import './TeamSection.css'; // We'll add styles here
 
 const teamMembers = [
   {
-    name: 'Jane Doe',
-    title: 'Marketing Lead',
+    name: 'Zakhele Shiba',
+    title: 'Blockchain Developer',
     image: '/images/team1.jpeg',
     socials: {
       facebook: 'https://facebook.com',
@@ -16,8 +16,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'John Smith',
-    title: 'Product Manager',
+    name: 'Nokuphiwo Mwelase',
+    title: 'Operations Manager',
     image: '/images/team2.jpeg',
     socials: {
       facebook: '#',
@@ -26,19 +26,9 @@ const teamMembers = [
     },
   },
   {
-    name: 'John Smith',
-    title: 'Product Manager',
+    name: 'Andiswa Hlophe',
+    title: 'Sustainability Analyst',
     image: '/images/team3.jpeg',
-    socials: {
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-    },
-  },
-  {
-    name: 'John Smith',
-    title: 'Product Manager',
-    image: '/images/team4.jpeg',
     socials: {
       facebook: '#',
       twitter: '#',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container, Dropdown, Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
@@ -53,13 +53,21 @@ function CustomNavbar() {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" sticky='top' expand="lg" className="px-4">
+      <Navbar expand="lg" className="bg-white shadow-sm" sticky='top'>
         <Container fluid>
-          <Navbar.Brand href="/">Invexus-Pulse Energy</Navbar.Brand>
+          <Navbar.Brand href="/">
+          <img
+              src="/images/logo.jpeg"
+              width="150"
+              height="60"
+              className="d-inline-block align-top"
+              alt="Invexus Support"
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
+            <Nav className="mx-auto mt-6" gap={3}>
+              <Nav.Link href="/" > <h4>Home</h4> </Nav.Link>
               <Nav.Link
               onClick={() => {
                 if (user && user.role) {
@@ -69,15 +77,15 @@ function CustomNavbar() {
                 }
               }}
             >
-              Dashboard
+             <h4>Dashboard</h4> 
             </Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href="/about"><h4>About</h4></Nav.Link>
+              <Nav.Link href="/contact"><h4>Contact</h4></Nav.Link>
             </Nav>
 
             <Nav className="ms-auto">
               {user ? (
-                <Dropdown>
+                <Dropdown align="end">
                   <Dropdown.Toggle variant="success" id="dropdown-basic">
                     <i className="bi bi-person-circle me-1"></i>
                     {user.name}
@@ -91,7 +99,7 @@ function CustomNavbar() {
                 </Dropdown>
               ) : (
                 <>
-                  <Button variant="outline-light" className="me-2" onClick={() => setShowLogin(true)}>
+                  <Button variant="danger" className="me-2" onClick={() => setShowLogin(true)}>
                     Login
                   </Button>
                   <Button variant="success" onClick={() => setShowRegister(true)}>
