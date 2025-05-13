@@ -6,7 +6,7 @@ import './TeamSection.css'; // We'll add styles here
 
 const teamMembers = [
   {
-    name: 'Zakhele Shiba',
+    name: 'Zakhele Shiba Jr.',
     title: 'Blockchain Developer',
     image: '/images/team1.jpeg',
     socials: {
@@ -36,8 +36,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'Andiswa Hlophe',
-    title: 'Sustainability Analyst',
+    name: 'Gugu Msomi',
+    title: 'Transport Manager',
     image: '/images/team4.jpeg',
     socials: {
       facebook: '#',
@@ -46,8 +46,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'Andiswa Hlophe',
-    title: 'Sustainability Analyst',
+    name: 'Zamile Luthuli',
+    title: 'Blockchain Analyst',
     image: '/images/team5.jpeg',
     socials: {
       facebook: '#',
@@ -56,8 +56,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'Andiswa Hlophe',
-    title: 'Sustainability Analyst',
+    name: 'Ayavuya April',
+    title: 'Supply Chain Manager',
     image: '/images/team6.jpeg',
     socials: {
       facebook: '#',
@@ -66,8 +66,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'Andiswa Hlophe',
-    title: 'Sustainability Analyst',
+    name: 'Likho Tsewu',
+    title: 'Logistics Coordinator',
     image: '/images/team7.jpeg',
     socials: {
       facebook: '#',
@@ -76,8 +76,8 @@ const teamMembers = [
     },
   },
   {
-    name: 'Andiswa Hlophe',
-    title: 'Sustainability Analyst',
+    name: 'Linda Dlamini',
+    title: 'Risk Manager',
     image: '/images/team8.jpeg',
     socials: {
       facebook: '#',
