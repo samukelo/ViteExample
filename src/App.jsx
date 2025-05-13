@@ -14,6 +14,10 @@ import Subscriptions from './components/Subscriptions'
 import Wallet from './components/Wallet'
 import UserManagement from './components/UserManagement'
 import Warehouses from './components/Warehouses'
+import InventoryView from './components/InventoryView'
+import TrackSKU from './components/TrackSKU';
+import TrackOrders from './components/TrackOrders'
+import ShipmentLogistics from './components/ShipmentLogistics';
 
 function App() {
   return (
@@ -33,6 +37,10 @@ function App() {
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/usermanagement" element={<UserManagement />} />
         <Route path="/warehouses" element={<Warehouses />} />
+        <Route path="/inventory" element={<InventoryView />} />
+        <Route path="/tracksku" element={<TrackSKU />} />
+        <Route path="/trackorders" element={<TrackOrders />} />
+        <Route path="/shipmenttracking" element={<ShipmentLogistics />} />
       </Routes>
     </Router>
   );
