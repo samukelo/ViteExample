@@ -122,7 +122,7 @@ const teamMembers = [
     },
   },{
     name: 'Luyanda Khumalo',
-    title: 'Warehhouse Manager',
+    title: 'Warehouse Manager',
     image: '/images/team13.jpeg',
     socials: {
       facebook: '#',
