@@ -29,8 +29,8 @@ function Contact() {
                 <Col md={6}>
                     <h3>Our Office</h3>
                     <p>
-                        <i className="bi bi-envelope"></i> info@greenchain.com<br />
-                        <i className="bi bi-telephone"></i> +1 (555) 123-4567
+                        <i className="bi bi-envelope"></i> info@invexuspulseenergy.co.za<br />
+                        <i className="bi bi-telephone"></i> 011 935 2025
                     </p>
                     {/* Map integration would go here */}
                 </Col>
