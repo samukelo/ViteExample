@@ -103,15 +103,6 @@ const teamMembers = [
       linkedin: '#',
     },
   },{
-    name: 'Linda Dlamini',
-    title: 'Risk Manager',
-    image: '/images/team10.jpeg',
-    socials: {
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-    },
-  },{
     name: 'Sindiswa Mkhize',
     title: 'Project Manager',
     image: '/images/team12.jpeg',
