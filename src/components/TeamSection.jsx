@@ -78,7 +78,52 @@ const teamMembers = [
   {
     name: 'Linda Dlamini',
     title: 'Risk Manager',
-    image: '/images/team8.jpeg',
+    image: '/images/team10.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },{
+    name: 'Bianca Modise',
+    title: 'Project Manager',
+    image: '/images/team9.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },{
+    name: 'Aobakwe Kgothego',
+    title: 'CFO',
+    image: '/images/team11.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },{
+    name: 'Linda Dlamini',
+    title: 'Risk Manager',
+    image: '/images/team10.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },{
+    name: 'Sindiswa Mkhize',
+    title: 'Project Manager',
+    image: '/images/team12.jpeg',
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      linkedin: '#',
+    },
+  },{
+    name: 'Luyanda Khumalo',
+    title: 'Warehhouse Manager',
+    image: '/images/team13.jpeg',
     socials: {
       facebook: '#',
       twitter: '#',
